@@ -2,7 +2,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
 import LogoSvg from "../../assets/svgs/logo.svg";
-import { Background, Text } from "../../components/styled";
+import { Background, Gradient, Text } from "../../components/styled";
 import theme from "../../theme";
 
 import Google from "../../assets/svgs/logoGoogle.svg";
@@ -64,14 +64,8 @@ export const LoginButtonText = styled(Text).attrs({
   font-size: ${RFValue(14)}px;
 `;
 
-export const Gradient = styled(LinearGradient).attrs({
-  colors: [theme.colors.primary_200, theme.colors.primary_500],
-  start: { x: 0.1, y: 0 },
-})`
-  align-items: center;
-  justify-content: center;
+export const LoginButtonGradient = styled(Gradient)`
   height: ${RFPercentage(6.1)}px;
-  border-radius: 16px;
 `;
 
 export const SignUpText = styled(ForgotPasswordText)`

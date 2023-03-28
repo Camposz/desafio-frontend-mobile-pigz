@@ -7,10 +7,10 @@ import { TextInput } from "../../components";
 import theme from "../../theme";
 import {
   ForgotPasswordText,
-  Gradient,
   HighlightedSignUpText,
   LoginBackground,
   LoginButton,
+  LoginButtonGradient,
   LoginButtonText,
   LoginFormContainer,
   LoginFormTitle,
@@ -67,9 +67,9 @@ export const Login = () => {
       </Pressable>
 
       <LoginButton onPress={() => navigate("HomeRoutes")}>
-        <Gradient>
+        <LoginButtonGradient>
           <LoginButtonText>Entrar</LoginButtonText>
-        </Gradient>
+        </LoginButtonGradient>
       </LoginButton>
 
       <Pressable onPress={() => alert("criar conta clicado!")}>
