@@ -38,7 +38,7 @@ export const LogoContainer = styled.View`
   align-items: center;
   justify-content: center;
   gap: ${RFPercentage(0.8)}px;
-  margin-top: ${RFPercentage(12)}px;
+  margin-top: ${RFPercentage(11)}px;
   margin-bottom: ${RFPercentage(4.7)}px;
 `;
 

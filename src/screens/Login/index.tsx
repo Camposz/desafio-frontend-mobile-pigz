@@ -1,5 +1,7 @@
+import { useNavigation } from "@react-navigation/native";
 import { Eye, EyeSlash } from "phosphor-react-native";
 import { useState } from "react";
+import { Pressable } from "react-native";
 import { RFPercentage } from "react-native-responsive-fontsize";
 import { TextInput } from "../../components";
 import theme from "../../theme";
@@ -26,7 +28,10 @@ import {
 export const Login = () => {
   const ICON_SIZE = RFPercentage(3.3);
   const ICON_COLOR = theme.colors.primary_500;
+
   const [isPasswordHidden, setPasswordHidden] = useState(true);
+
+  const { navigate } = useNavigation();
 
   return (
     <LoginBackground>
@@ -57,24 +62,28 @@ export const Login = () => {
         />
       </LoginFormContainer>
 
-      <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
+      <Pressable onPress={() => alert("esqueci minha senha clicado!")}>
+        <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
+      </Pressable>
 
-      <LoginButton>
+      <LoginButton onPress={() => navigate("HomeRoutes")}>
         <Gradient>
           <LoginButtonText>Entrar</LoginButtonText>
         </Gradient>
       </LoginButton>
 
-      <SignUpText>
-        Não tem uma conta?{" "}
-        <HighlightedSignUpText>Criar agora!</HighlightedSignUpText>{" "}
-      </SignUpText>
+      <Pressable onPress={() => alert("criar conta clicado!")}>
+        <SignUpText>
+          Não tem uma conta?{" "}
+          <HighlightedSignUpText>Criar agora!</HighlightedSignUpText>{" "}
+        </SignUpText>
+      </Pressable>
 
       <SocialLoginTitleContainer>
         <SocialLoginTitle>Entrar com</SocialLoginTitle>
       </SocialLoginTitleContainer>
 
-      <SocialLoginButton>
+      <SocialLoginButton onPress={() => alert("entrar com google clicado!")}>
         <LogoGoogle />
         <SocialLoginButtonLabel>Continuar com o Google</SocialLoginButtonLabel>
       </SocialLoginButton>
