@@ -6,6 +6,7 @@ export default {
     primary_100: "#FE671F4D",
 
     gray_100: "#676767",
+    gray_200: "#9F9F9F",
     gray_700: "#222222",
     gray_800: "#333333",
 
@@ -18,4 +19,4 @@ export default {
     semibold: "Poppins_600SemiBold",
     bold: "Poppins_700Bold",
   },
-};
+} as const;
