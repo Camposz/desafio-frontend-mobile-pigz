@@ -19,8 +19,8 @@ const screenOptions = ({
   route: { name },
 }: ScreenOptionsProps): BottomTabNavigationOptions => ({
   tabBarActiveTintColor: theme.colors.primary_500,
-  header: () => {
-    return <Header screenName={name} />;
+  header: ({ navigation }) => {
+    return <Header screenName={name} navigation={navigation} />;
   },
 });
 
@@ -30,7 +30,11 @@ const TabBar = (props: BottomTabBarProps) => {
 
 export const HomeRoutes = () => {
   return (
-    <Navigator screenOptions={screenOptions} tabBar={TabBar}>
+    <Navigator
+      screenOptions={screenOptions}
+      tabBar={TabBar}
+      initialRouteName="Visão Geral"
+    >
       <Screen name="Relatórios" component={Dashboard} />
       <Screen name="Visão Geral" component={Dashboard} />
       <Screen name="Perfil" component={Dashboard} />
