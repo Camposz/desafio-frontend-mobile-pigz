@@ -18,7 +18,7 @@ export const Text = styled.Text<TextProps>`
 
 export const Gradient = styled(LinearGradient).attrs({
   colors: [theme.colors.primary_200, theme.colors.primary_500],
-  start: { x: 0.1, y: 0 },
+  start: { x: 0.3, y: 0 },
 })`
   align-items: center;
   justify-content: center;
