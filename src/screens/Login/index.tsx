@@ -4,14 +4,12 @@ import { useState } from "react";
 import { Pressable } from "react-native";
 import { RFPercentage } from "react-native-responsive-fontsize";
 import { TextInput } from "../../components";
+import { ActionButton } from "../../components/ActionButton";
 import theme from "../../theme";
 import {
   ForgotPasswordText,
   HighlightedSignUpText,
   LoginBackground,
-  LoginButton,
-  LoginButtonGradient,
-  LoginButtonText,
   LoginFormContainer,
   LoginFormTitle,
   Logo,
@@ -66,11 +64,7 @@ export const Login = () => {
         <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
       </Pressable>
 
-      <LoginButton onPress={() => navigate("HomeRoutes")}>
-        <LoginButtonGradient>
-          <LoginButtonText>Entrar</LoginButtonText>
-        </LoginButtonGradient>
-      </LoginButton>
+      <ActionButton title="Entrar" onPress={() => navigate("HomeRoutes")} />
 
       <Pressable onPress={() => alert("criar conta clicado!")}>
         <SignUpText>

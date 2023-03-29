@@ -6,6 +6,7 @@ import { Background, Gradient, Text } from "../../components/styled";
 import theme from "../../theme";
 
 import Google from "../../assets/svgs/logoGoogle.svg";
+import { LoginButtonText } from "../../components/ActionButton/style";
 
 export const LoginBackground = styled(Background)`
   padding: 0 ${RFPercentage(3.1)}px;
@@ -51,21 +52,6 @@ export const ForgotPasswordText = styled(Text)`
   color: ${({ theme }) => theme.colors.gray_100};
   text-decoration: underline;
   margin-top: ${RFPercentage(3.1)}px;
-`;
-
-export const LoginButton = styled.TouchableOpacity`
-  margin-top: ${RFPercentage(3.1)}px;
-`;
-
-export const LoginButtonText = styled(Text).attrs({
-  weight: "medium",
-})`
-  color: ${({ theme }) => theme.colors.white};
-  font-size: ${RFValue(14)}px;
-`;
-
-export const LoginButtonGradient = styled(Gradient)`
-  height: ${RFPercentage(6.1)}px;
 `;
 
 export const SignUpText = styled(ForgotPasswordText)`
